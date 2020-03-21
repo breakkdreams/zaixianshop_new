@@ -2,11 +2,11 @@ package com.breakk.zaixianshop.model;
 
 import java.util.Map;
 
-public class BaseModel {
+public class BaseModel<T> {
     private String status;
     private String message;
     private int code;
-    private Map<String,Object> data;
+    private T data;
 
     public String getStatus() {
         return status;
@@ -32,11 +32,11 @@ public class BaseModel {
         this.code = code;
     }
 
-    public Map<String, Object> getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Map<String, Object> data) {
+    public void setData(T data) {
         this.data = data;
     }
 }
